@@ -1,0 +1,42 @@
+CREATE TABLE zoo (
+	ID SERIAL PRIMARY KEY,
+	Nombre VARCHAR(150) NOT NULL,
+	Ciudad VARCHAR(150) NOT NULL,
+	Pais VARCHAR(150) NOT NULL,
+	Tamano_m2 NUMERIC(10, 2) UNIQUE NOT NULL,
+	Presupuesto_anual NUMERIC(10, 2) NOT NULL
+);
+
+CREATE TABLE Especie_animal (
+	ID SERIAL PRIMARY KEY,
+    Nombre_vulgar VARCHAR(150),
+    Nombre_cientifico VARCHAR(150) NOT NULL,
+    Familia VARCHAR(150) NOT NULL,
+    Peligro_extincion BOOLEAN
+);
+
+CREATE TABLE Animal_zoo (
+    ID SERIAL PRIMARY KEY,
+    ID_Especie INTEGER,
+    Sexo VARCHAR(1),
+    Ano_nacimiento INTEGER,
+    Pais_origen VARCHAR(150),
+    Continente VARCHAR(150),
+	FOREIGN KEY (ID_Especie) REFERENCES Especie_animal(ID)
+);
+
+
+CREATE TABLE Registro (
+	ID SERIAL PRIMARY KEY,
+	ID_zoo INTEGER,
+	ID_animal INTEGER,
+	FOREIGN KEY (ID_zoo) REFERENCES zoo(ID),
+	FOREIGN KEY (ID_animal) REFERENCES Animal_zoo(ID)
+);
+
+
+
+
+
+
+	
