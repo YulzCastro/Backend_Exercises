@@ -1,0 +1,24 @@
+EJERCICIO 5: CONSULTAS SQL
+
+SELECT * FROM customer
+1. SELECT film_id, title FROM film;
+2. SELECT * FROM film LIMIT 5; 
+3. SELECT * FROM film WHERE film_id<4;
+4. SELECT * FROM film WHERE rating='PG' OR rating='G';
+5. SELECT * FROM actor WHERE first_name IN ('Angela', 'Angelina', 'Audrey');
+6. SELECT * FROM actor WHERE first_name='Julia';
+7. SELECT * FROM actor WHERE first_name='Chris' OR first_name='Cameron' OR first_name='Cuba';
+8. SELECT * FROM customer WHERE first_name='Jamie' AND last_name='Rice';
+9. SELECT payment_date, amount FROM payment WHERE amount<=1;
+10. SELECT DISTINCT rental_duration FROM film;
+11. SELECT * FROM city ORDER BY country_id, city; 
+12. SELECT return_date, customer_id FROM rental ORDER BY return_date LIMIT 3;
+13. SELECT rating, COUNT(*) FROM film WHERE rating='PG' OR rating = 'PG-13' OR rating='NC-17' GROUP BY rating;
+14. SELECT COUNT(DISTINCT customer_id) FROM rental;
+15. SELECT last_name, COUNT(*) AS same_name FROM customer GROUP BY last_name ORDER BY same_name DESC;
+16. SELECT film_id, COUNT(*) AS num_of_actors FROM film_actor GROUP BY film_id ORDER BY num_of_actors DESC LIMIT 1;
+17. SELECT actor_id, COUNT(*) AS num_of_films FROM film_actor GROUP BY actor_id ORDER BY num_of_films DESC LIMIT 1;
+18. SELECT country_id, COUNT(*) AS num_of_cities FROM city GROUP BY country_id ORDER BY COUNT(*) DESC;
+19. SELECT ROUND(AVG(rental_rate), 2) AS avg_rental_rate FROM film;
+20. SELECT actor_id, CONCAT(first_name, ' ', last_name) AS full_name FROM actor ORDER BY LENGTH(CONCAT(first_name, last_name)) DESC LIMIT 10;
+
