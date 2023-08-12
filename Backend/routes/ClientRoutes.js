@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', () => "client");
+router.get('/', (req, res) =>  res.status(200).send({
+    message:"Client"
+}));
 
 module.exports = router;
+
 
