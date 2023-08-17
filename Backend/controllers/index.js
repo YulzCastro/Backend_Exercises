@@ -1,9 +1,9 @@
-const ClientRoutes = require('./ClientControllers');
-const ProductRoutes = require('./ProductControllers');
-const SaleRoutes = require('./SaleControllers');
+const ClientController = require('./ClientController');
+const ProductController = require('./ProductController');
+const SaleController = require('./SaleController');
 
 module.exports = {
-    ClientRoutes,
-    ProductRoutes,
-    SaleRoutes
-}
+    ClientController,
+    ProductController,
+    SaleController,
+};

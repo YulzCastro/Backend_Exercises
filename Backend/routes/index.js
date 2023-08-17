@@ -5,5 +5,5 @@ const SaleRoutes = require('./SaleRoutes');
 module.exports = {
     ClientRoutes,
     ProductRoutes,
-    SaleRoutes
-}
+    SaleRoutes,
+};
