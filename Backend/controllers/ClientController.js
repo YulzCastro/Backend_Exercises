@@ -18,8 +18,8 @@ const getClient = (req, res) => {
 };
 
 const insertClient = (req, res) => {
-    const { first_name, last_name,active } = req.body
-
+    const {first_name,last_name,active} = req.body
+    
     if(first_name !== '' && last_name !== ''){
         clientModel
             .insertClient({ first_name, last_name,active })
