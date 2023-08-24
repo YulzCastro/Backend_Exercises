@@ -13,6 +13,15 @@ router.post('/', ClientController.insertClient);
 // Actualizamos un cliente
 router.put('/:id', ClientController.updateClient)
 
+// Parámetros son los que encontramos en la ruta
+// http://localhost:3000/api/v1/clients/2
+
+// Body es el cuerpo de la petición y no aparece en la ruta
+
+// Los queries aparecen y se agregan empezando con ?,
+// separados por &
+// http://localhost:3000/api/v1/clients/?first_name=Juan
+
 // Eliminar un cliente
 router.delete('/:id',ClientController.deleteClient)
 
@@ -21,5 +30,3 @@ router.get('/:id',ClientController.getClient)
 
 
 module.exports = router;
-
-
