@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "base64_dev": "nodemon base64-server.js"
+    "base64_dev": "nodemon base64-server.js",
+    "jwt_dev": "nodemon jwt-server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
   "dependencies": {
     "basic-auth": "^2.0.1",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
     "nodemon": "^3.0.1"
   }
 }
